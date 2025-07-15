@@ -632,10 +632,10 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 🤝 Support
 
 For support and questions:
-- GitHub Issues
-- Discord Community
-- Technical Documentation
-- Email Support
+- GitHub Issues (will be added later)
+- Discord Community (will be added later)
+- Technical Documentation (will be added later)
+- Email Support (will be added later)
 
 ---
 

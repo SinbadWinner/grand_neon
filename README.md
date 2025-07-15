@@ -64,6 +64,91 @@ multi-swap-dapp/
    - Security audits
    - Gas optimization tests
 
+## 🔗 Neon EVM Integration & SDK Usage
+
+### 📦 Neon SDK Dependencies
+This project leverages the complete Neon EVM SDK ecosystem:
+
+```json
+{
+  "@neonevm/solana-sign": "^0.2.2",           // Solana wallet integration
+  "@neonevm/token-transfer-core": "^4.4.3",   // Core transfer functionality  
+  "@neonevm/token-transfer-ethers": "^4.4.3", // Ethers.js integration
+  "@solana/spl-token": "^0.3.9",              // SPL token support
+  "@solana/web3.js": "^1.87.6"                // Solana blockchain interaction
+}
+```
+
+### 🌉 Cross-Chain Composability Features
+
+**Neon Proxy RPC API Integration:**
+- `NeonProxyRpcApi` for seamless Neon EVM interaction
+- Automatic Solana-to-Neon transaction scheduling  
+- Native Solana wallet signature verification
+
+**ERC20ForSPL Token System:**
+- Bi-directional token transfers between Solana and Neon EVM
+- Native SPL token wrapping as ERC20 contracts
+- Cross-chain liquidity pool creation
+
+**Solana Native SDK Implementation:**
+- Direct Solana wallet integration (Phantom, Solflare)
+- Native Solana transaction signing for EVM operations
+- Associated Token Account (ATA) management
+
+### 🛠️ Technical Implementation
+
+**Key Neon SDK Features Used:**
+
+1. **Solana-Native Transaction Flow:**
+   ```javascript
+   // Initialize Neon Proxy API
+   const proxyApi = new NeonProxyRpcApi(NEON_RPC);
+   const {chainId, solanaUser} = await proxyApi.init(keypair);
+   
+   // Create scheduled Neon EVM transactions
+   // Sign with Solana wallet credentials  
+   // Submit to Neon EVM via Solana network
+   ```
+
+2. **Cross-Chain Token Transfers:**
+   - Automatic SPL-to-ERC20 token mapping
+   - Bidirectional transfers via `transferSolana()` and `claimTo()`
+   - Native Solana ATA integration for seamless UX
+
+3. **Composability Libraries:**
+   - Balance account instruction creation
+   - Associated token account management
+   - Cross-chain transaction batching
+
+### 📁 Neon SDK Implementation Files
+
+**Core Integration Scripts:**
+- `token-transfer-solana-signer-sdk.js` - Solana-to-Neon transfers
+- `token-approval-solana-signer-sdk.js` - Cross-chain approvals  
+- `neon-solana-native-swap-demo/` - Complete Solana Native implementation
+
+**Smart Contract Integration:**
+- ERC20ForSPL contracts in `/contracts/erc20-for-spl/`
+- Neon precompiles usage in orchestrator contracts
+- Cross-chain liquidity pool management
+
+### 🚀 Neon SDK Benefits for Multi-Swap Protocol
+
+**Enhanced User Experience:**
+- Users can interact with EVM contracts using Solana wallets
+- No need for separate Ethereum wallets or bridges  
+- Native Solana transaction fees (lower costs)
+
+**Technical Advantages:**
+- Automatic cross-chain transaction orchestration
+- Built-in security through Neon EVM validation
+- Seamless integration with existing Solana ecosystem
+
+**DeFi Innovation:**
+- First protocol to combine PancakeSwap + Raydium via Neon
+- Cross-chain NFT rewards system
+- Unified liquidity across Ethereum and Solana ecosystems
 ---
 
 ## 💎 NFT Rewards & Points System

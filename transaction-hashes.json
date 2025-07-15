@@ -1,0 +1,21 @@
+{
+  "network": "hardhat",
+  "chainId": 1337,
+  "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  "timestamp": "2025-07-13T20:27:36.199Z",
+  "transactions": {
+    "WNEON": "0x84f96347e454b6e889c1b7df597ab70989a13b0b4f2bc247cde0701dd6132aa0",
+    "PancakeFactory": "0x5b59819ae8d3be713d651c6b9a1027ee52945f35bde2f593ce9845ab58115b8b",
+    "PancakeRouter": "0x343c1a80263c852358a207f2e724bb45721acc524b4b8699573c4d3ff5bcc259",
+    "USDC": "0x7ec909ea62198eda52409b3a091dd32ae1a1f7a164840e4d988d2e8eb97a2429",
+    "USDT": "0xa91a56cd156697602f39cd709cf661bf78f996f546952ed87e870f13b1007f07",
+    "BTC": "0x56731f5331e980670999e55e724c82d3a1d7dcccb76f93b208dde1cafe8d7cf3",
+    "ETH": "0x101bdc5fbaa32dc9d9a525fec48ac60d126ca3ddaa3a53eb8f8d23034b1497f2",
+    "Raydium": "0xbefc0cf5e6c3509d0b32323197f9029e958edac592239b8644e697a62f77883c",
+    "NFTRewards": "0xd2a67df6bbbbe2869606ae7c6b50999f33b7f99e3459aa27d9ce544e0bbeaac1",
+    "USDC/WNEON_pair": "0x49b2a1664b7a56f8b8aabeb1364915bbcf0c4795d264c09281ddb0a793793b3f",
+    "USDT/WNEON_pair": "0x5243655ae1eb2aa261031816283bf3d9e6f0df0da612620c7dced74cb8924bc5",
+    "BTC/WNEON_pair": "0x05daec254891cd17038b951d5be415cf6a1e1b6538492c6b79813c488e5f1672",
+    "ETH/WNEON_pair": "0xa9ab0099a73e8a4c3910c6e20028f4b16f9b3bc09554c8b05df796340d3fed3e"
+  }
+}

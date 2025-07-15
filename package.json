@@ -1,0 +1,80 @@
+{
+  "name": "multi-swap-dapp",
+  "version": "1.0.0",
+  "description": "Multi-Swap dApp with PancakeSwap and Raydium integration, NFT rewards system, and Multi-Swap Orchestrator",
+  "main": "deploy-multi-swap-dapp.js",
+  "scripts": {
+    "install-all": "npm install && cd neon-solana-native-swap-demo/pancakeswap && npm install && cd ../frontend/swap-ui && npm install",
+    "setup:env": "copy env-config.txt .env",
+    "deploy": "node deploy-all.js",
+    "deploy:mock": "node deploy-all-mock.js",
+    "deploy:tokens": "node deploy-tokens.js",
+    "deploy:tokens:mock": "node deploy-tokens-mock.js",
+    "deploy:raydium": "node deploy-raydium.js",
+    "deploy:nft": "node deploy-nft-rewards.js",
+    "deploy:pools": "node create-liquidity-pools.js",
+    "deploy:pools:mock": "node create-liquidity-pools-mock.js",
+    "deploy:pancakeswap": "cd neon-solana-native-swap-demo/pancakeswap && npm run deploy",
+    "airdrop": "node airdrop-tokens.js airdrop",
+    "airdrop:sol": "node airdrop-tokens.js sol",
+    "balance": "node airdrop-tokens.js balance",
+    "start:frontend": "cd neon-solana-native-swap-demo/frontend/swap-ui && npm run dev",
+    "build:frontend": "cd neon-solana-native-swap-demo/frontend/swap-ui && npm run build",
+    "test": "node test-deployment.js",
+    "test:connections": "node test-connection.js",
+    "test:deployment": "node test-deployment.js deployment",
+    "test:swap": "node test-swap.js",
+    "test:integration": "node test-integration.js full",
+    "test:performance": "node test-integration.js performance",
+    "test:pancakeswap": "node test-pancakeswap.js",
+    "test:full": "node test-full-deployment.js",
+    "test:all": "npm run test:connections && npm run test && npm run test:swap && npm run test:integration && npm run test:performance && npm run test:pancakeswap && npm run test:full",
+    "examples": "node example-usage.js",
+    "setup": "npm run setup:env && npm run install-all && npm run deploy",
+    "setup:full": "npm run setup && npm run airdrop:help",
+    "airdrop:help": "echo For testing, run: npm run airdrop YOUR_SOLANA_WALLET_ADDRESS",
+    "dev": "concurrently \"npm run start:frontend\" \"echo 🚀 Frontend started at http://localhost:5173\"",
+    "clean": "if exist dapp-config.* del dapp-config.* && if exist node_modules rmdir /s /q node_modules && if exist neon-solana-native-swap-demo\\pancakeswap\\node_modules rmdir /s /q neon-solana-native-swap-demo\\pancakeswap\\node_modules && if exist neon-solana-native-swap-demo\\frontend\\swap-ui\\node_modules rmdir /s /q neon-solana-native-swap-demo\\frontend\\swap-ui\\node_modules"
+  },
+  "keywords": [
+    "solana",
+    "neon-evm",
+    "defi",
+    "swap",
+    "pancakeswap",
+    "raydium",
+    "nft",
+    "rewards",
+    "composability"
+  ],
+  "author": "Multi-Swap dApp Developer",
+  "license": "MIT",
+  "dependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.0.5",
+    "@openzeppelin/contracts": "^4.9.6",
+    "@solana/spl-token": "^0.3.9",
+    "@solana/web3.js": "^1.87.6",
+    "bs58": "^5.0.0",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.8.1",
+    "hardhat": "^2.19.2",
+    "@neonevm/solana-sign": "^0.2.2",
+    "@neonevm/token-transfer-core": "^4.4.3",
+    "@neonevm/token-transfer-ethers": "^4.4.3"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/multi-swap-dapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/multi-swap-dapp/issues"
+  },
+  "homepage": "https://github.com/your-username/multi-swap-dapp#readme"
+}

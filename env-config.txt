@@ -1,0 +1,12 @@
+# Neon EVM & Solana Configuration
+PRIVATE_KEY_SOLANA=gYHaYQWzgZo8qAYRSSYsu7uberqmjfi4urwbFSoRfwjdmikXPkoGcKGxcL9L7gwiZiqAnevGK3FgZgFeWvjb65m
+PRIVATE_KEY_EVM=352188f60e5d54b670b5cc70d2c5fefcc442abc64a55c2b34e3b693a95023dd6
+
+# RPC Endpoints (devnet)
+NEON_RPC=https://devnet.neonevm.org/sol
+SOLANA_RPC=https://api.devnet.solana.com
+NEON_EVM_NODE=https://devnet.neonevm.org
+
+# Network Configuration
+NETWORK=devnet
+CHAIN_ID=245022926 

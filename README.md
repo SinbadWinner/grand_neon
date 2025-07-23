@@ -66,10 +66,10 @@ multi-swap-dapp/
 
 ## 📸 Screenshots
 
-### 🖥️ Main Screen
+### 🖥️ Main Screen 1
 ![Main Screen](screenshot1.png)
 
-### ⚙️ Swap Interface
+### ⚙️ Main Screen 2
 ![Swap Interface](screenshot2.png)
 
 The screenshot shows the deployment of local token contracts, pancake pools, raydium pools, and the point and NFT reward system. All that remains is to create the UI and deploy the contracts on the Neon network.
